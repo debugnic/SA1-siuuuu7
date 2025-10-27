@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home — My Article Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">MyArticles</a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+        <ul class="nav-list">
+          <li><a href="../index/index.html">Home</a></li>
+          <li><a href="../about-me/aboutme.html">About</a></li>
+          <li class="dropdown">
+            <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Pages ▾</button>
+            <ul class="dropdown-menu">
+              <li><a href="../index/index.html">Home</a></li>
+              <li><a href="../about-me/aboutme.html">About</a></li>
+              <li><a href="../article/article.html">Sample Article</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Readable, elegant article templates</h1>
+      <p class="lead">A clean layout for long-form content with accessible navigation and beautiful typography.</p>
+      <a class="btn" href="../article/article.html">Read the sample article</a>
+    </section>
+
+    <section class="posts">
+      <h2>Featured</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="https://via.placeholder.com/800x400.png?text=Article+Hero" alt="Hero image"/>
+          <h3><a href="../article/article.html">How to write beautiful articles</a></h3>
+          <p class="meta">By Jane Doe • Oct 27, 2025</p>
+          <p>Quick summary that entices readers — clean, focused, and ready for long-form storytelling.</p>
+          <a class="read-more" href="../article/article.html">Continue →</a>
+        </article>
+
+        <article class="card">
+          <img src="https://via.placeholder.com/800x400.png?text=Another+Story" alt="Another story"/>
+          <h3><a href="../article/article.html">Designing with content-first principles</a></h3>
+          <p class="meta">By John Smith • Sep 12, 2025</p>
+          <p>Small card showing how the article list looks on different screens.</p>
+          <a class="read-more" href="../article/article.html">Continue →</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 MyArticles — Built with a simple static template.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
