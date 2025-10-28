@@ -11,6 +11,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="../index/index.html">MyArticles</a>
+
       <nav class="site-nav" aria-label="Main navigation">
         <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
         <ul class="nav-list">
@@ -30,15 +31,41 @@
   </header>
 
   <main class="container narrow">
-    <article class="about-card">
-      <img class="avatar" src="https://via.placeholder.com/160.png?text=Me" alt="Author avatar">
-      <h1>About Me</h1>
-      <p class="meta">Jane Doe — Writer & Designer</p>
-      <p>I write about design, content strategy, and building readable websites. This template demonstrates a lightweight, responsive approach to articles and site navigation. Use it as a base for your blog or publication.</p>
+    <div class="about-card animated" id="aboutCard">
+      <div class="about-header">
+        <img class="avatar animated-pulse" src="https://via.placeholder.com/160.png?text=N" alt="Author avatar">
+        <div class="about-headline">
+          <h1 data-lang="en">About Me</h1>
+          <h1 data-lang="id" hidden>Tentang Saya</h1>
+          <p class="meta" data-lang="en">Nicholas — Writer & Designer</p>
+          <p class="meta" data-lang="id" hidden>Nicholas — Penulis & Desainer</p>
+        </div>
 
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
-    </article>
+        <div class="lang-switch">
+          <label for="langToggle" class="visually-hidden">Language</label>
+          <button id="btn-en" class="lang-btn" aria-pressed="true">EN</button>
+          <button id="btn-id" class="lang-btn" aria-pressed="false">ID</button>
+        </div>
+      </div>
+
+      <section class="about-content">
+        <!-- English content -->
+        <div class="lang-block" data-lang="en">
+          <p>Hi, my name is Nicholas. I am the one who created this website. Thanks for reading this website!</p>
+
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+        </div>
+
+        <!-- Bahasa Indonesia content -->
+        <div class="lang-block" data-lang="id" hidden>
+          <p>Hai, nama saya Nicholas. Saya yang membuat situs web ini. Terima kasih telah membaca situs ini!</p>
+
+          <h2>Kontak</h2>
+          <p>Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer class="site-footer">
