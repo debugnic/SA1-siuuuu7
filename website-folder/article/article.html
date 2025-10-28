@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sample Article — MyArticles</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="article.css">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
   <header class="site-header">
@@ -14,72 +14,94 @@
       <nav class="site-nav" aria-label="Main navigation">
         <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
         <ul class="nav-list">
-          <li><a href="../index/index.html">Home</a></li>
-          <li><a href="../about-me/aboutme.html">About</a></li>
+          <li><a href="../index/index.html" data-lang="en">Home</a><a href="../index/index.html" data-lang="id" hidden>Beranda</a></li>
+          <li><a href="../about-me/aboutme.html" data-lang="en">About</a><a href="../about-me/aboutme.html" data-lang="id" hidden>Tentang</a></li>
           <li class="dropdown">
             <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Pages ▾</button>
             <ul class="dropdown-menu">
-              <li><a href="../index/index.html">Home</a></li>
-              <li><a href="../about-me/aboutme.html">About</a></li>
-              <li><a href="../article/article.html">Sample Article</a></li>
+              <li><a href="../index/index.html" data-lang="en">Home</a><a href="../index/index.html" data-lang="id" hidden>Beranda</a></li>
+              <li><a href="../about-me/aboutme.html" data-lang="en">About</a><a href="../about-me/aboutme.html" data-lang="id" hidden>Tentang</a></li>
+              <li><a href="../article/article.html" data-lang="en">Sample Article</a><a href="../article/article.html" data-lang="id" hidden>Contoh Artikel</a></li>
             </ul>
           </li>
         </ul>
       </nav>
+
+      <div class="lang-switch">
+        <button id="btn-en" class="lang-btn" aria-pressed="true">EN</button>
+        <button id="btn-id" class="lang-btn" aria-pressed="false">ID</button>
+      </div>
     </div>
   </header>
 
   <main class="container narrow">
     <article class="article">
       <header class="article-header">
-        <h1>The Art of Writing for the Web</h1>
-        <p class="byline">By Jane Doe • Oct 27, 2025</p>
+        <h1 data-lang="en">The Art of Writing for the Web</h1>
+        <h1 data-lang="id" hidden>Seni Menulis untuk Web</h1>
+        <p class="byline" data-lang="en">By Jane Doe • Oct 27, 2025</p>
+        <p class="byline" data-lang="id" hidden>Oleh Jane Doe • 27 Okt, 2025</p>
         <img class="hero" src="https://via.placeholder.com/1200x600.png?text=Article+Hero" alt="Article hero image">
       </header>
 
       <section class="article-body">
-        <p class="lead">Good web articles are readable, well-structured, and pleasant to the eye. This template shows how to present headings, paragraphs, lists, blockquotes, and code blocks.</p>
+        <p class="lead" data-lang="en">Good web articles are readable, well-structured, and pleasant to the eye. This template shows how to present headings, paragraphs, lists, blockquotes, and code blocks.</p>
+        <p class="lead" data-lang="id" hidden>Artikel web yang baik mudah dibaca, terstruktur, dan enak dilihat. Template ini menunjukkan cara menampilkan heading, paragraf, daftar, kutipan, dan blok kode.</p>
 
-        <h2>Readable typography</h2>
-        <p>Use generous line-height, a comfortable measure (line length), and clear hierarchy with headings and subheadings. The CSS here gives a max-width and typographic scale that works well for long-form.</p>
+        <h2 data-lang="en">Readable typography</h2>
+        <h2 data-lang="id" hidden>Tipografi yang terbaca</h2>
+        <p data-lang="en">Use generous line-height, a comfortable measure (line length), and clear hierarchy with headings and subheadings.</p>
+        <p data-lang="id" hidden>Gunakan tinggi baris yang cukup, lebar baris yang nyaman, dan hierarki jelas dengan heading dan subheading.</p>
 
-        <h3>Lists and notes</h3>
+        <h3 data-lang="en">Lists and notes</h3>
+        <h3 data-lang="id" hidden>Daftar dan catatan</h3>
         <ul>
-          <li>Short paragraphs</li>
-          <li>Descriptive headings</li>
-          <li>Highlighted quotes</li>
+          <li data-lang="en">Short paragraphs</li>
+          <li data-lang="id" hidden>Paragraf singkat</li>
+          <li data-lang="en">Descriptive headings</li>
+          <li data-lang="id" hidden>Heading deskriptif</li>
+          <li data-lang="en">Highlighted quotes</li>
+          <li data-lang="id" hidden>Kutipan disorot</li>
         </ul>
 
         <blockquote>
-          <p>Design is how it works — writing is how it reads. Both matter.</p>
+          <p data-lang="en">Design is how it works — writing is how it reads. Both matter.</p>
+          <p data-lang="id" hidden>Desain adalah bagaimana ia bekerja — menulis adalah bagaimana ia dibaca. Keduanya penting.</p>
           <cite>— A Thoughtful Author</cite>
         </blockquote>
 
-        <h3>Inline code</h3>
-        <p>Use <code>&lt;time&gt;</code> or semantic elements for dates, and keep inline code visually distinct using the <code>code</code> styling below.</p>
+        <h3 data-lang="en">Inline code</h3>
+        <h3 data-lang="id" hidden>Kode inline</h3>
+        <p data-lang="en">Use <code>&lt;time&gt;</code> or semantic elements for dates, and keep inline code visually distinct using the <code>code</code> styling below.</p>
+        <p data-lang="id" hidden>Gunakan elemen semantik untuk tanggal dan buat kode inline tampil berbeda secara visual menggunakan styling <code>code</code> di bawah.</p>
 
         <pre><code>function greet(name) {
   return `Hello, ${name}`;
 }</code></pre>
 
-        <h2>Images and captions</h2>
+        <h2 data-lang="en">Images and captions</h2>
+        <h2 data-lang="id" hidden>Gambar dan keterangan</h2>
         <figure>
           <img src="https://via.placeholder.com/900x400.png?text=Figure" alt="Figure example">
-          <figcaption>Figure 1. A placeholder image demonstrating the figure style.</figcaption>
+          <figcaption data-lang="en">Figure 1. A placeholder image demonstrating the figure style.</figcaption>
+          <figcaption data-lang="id" hidden>Gambar 1. Gambar penanda yang menunjukkan gaya figure.</figcaption>
         </figure>
 
-        <p>That's it — a compact, pleasant article layout ready to use.</p>
+        <p data-lang="en">That's it — a compact, pleasant article layout ready to use.</p>
+        <p data-lang="id" hidden>Itu saja — tata letak artikel yang ringkas dan menyenangkan siap digunakan.</p>
       </section>
 
       <footer class="article-footer">
-        <p>Tags: <a href="#">design</a>, <a href="#">writing</a>, <a href="#">web</a></p>
+        <p data-lang="en">Tags: <a href="#">design</a>, <a href="#">writing</a>, <a href="#">web</a></p>
+        <p data-lang="id" hidden>Tag: <a href="#">desain</a>, <a href="#">menulis</a>, <a href="#">web</a></p>
       </footer>
     </article>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 MyArticles</p>
+      <p data-lang="en">© 2025 MyArticles</p>
+      <p data-lang="id" hidden>© 2025 MyArticles</p>
     </div>
   </footer>
 
