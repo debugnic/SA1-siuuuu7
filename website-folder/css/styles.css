@@ -34,7 +34,7 @@ body{
 
 /* Dropdown */
 .dropdown{position:relative}
-.dropdown-toggle{background:none;border:0;padding:8px;border-radius:8px;cursor:pointer}
+.dropdown-toggle{background:none;border:0;padding:8px;border-radius:8px;cursor:pointer;font-size:inherit;color:var(--text);font-family:inherit}
 .dropdown-toggle:focus-visible{outline:3px solid rgba(37,99,235,0.12);outline-offset:2px}
 .dropdown-menu{position:absolute;top:100%;left:0;display:none;min-width:200px;background:var(--card);box-shadow:0 8px 24px rgba(16,24,40,0.08);border-radius:10px;padding:8px;margin-top:8px}
 .dropdown-menu li{list-style:none}
